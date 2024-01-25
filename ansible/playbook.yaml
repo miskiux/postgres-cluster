@@ -1,0 +1,7 @@
+- hosts: etcd
+  tasks:
+    - name: "Retrieve hostname"
+      command: hostname
+      register: output
+    - name: "Print hostname"
+      debug: var=output.stdout_lines

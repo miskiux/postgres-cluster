@@ -1,0 +1,4 @@
+[etcd]
+etcd1 ansible_host=127.0.0.1:1010  ansible_user=root
+etcd2 ansible_host=127.0.0.1:1011  ansible_user=root
+etcd3 ansible_host=127.0.0.1:1012  ansible_user=root
