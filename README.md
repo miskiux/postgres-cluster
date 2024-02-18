@@ -1,31 +1,20 @@
 ## running high-availability on postgres
 
-postgres, like other traditional sql databases optimize for strong consistency, thus achieving high availability out of the box requires work.
+## patroni
 
-**patroni**
+## distributed consensus
 
-patroni allows node replication by natively using postgres streaming replication and runs daemon processes which healthchecks nodes.
+etcd cluster acts as a source of truth and allows to achieve consensus between patroni instances.
 
-patroni = replication + promotion
-
-**distributed consensus**
-
-etcd cluster acts as a source of truth and allows to achieve consensus between patroni instances. patroni daemons use k/v store to communicate with each other.
-
-**haproxy**
+## haproxy
 
 routing the clients to whichever node Patroni is stating is the master.
 
-## usage
+## prerequisites
 
-**kv store**
-defaults to 3 etcd nodes. adjust etcd-node service PORT configuration if increasing node count.
+ - installed ansible on a local machine
 
-```
-docker-compose up --scale etcd-node=3
-```
-
-
+#### automation w/ ansible
 
 
 

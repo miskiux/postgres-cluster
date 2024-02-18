@@ -1,8 +1,0 @@
-name: '<exameple_hostname>'
-listen-peer-urls: 'http://10.193.102.205:2380'
-listen-client-urls: 'http://10.193.102.205:2379, http://127.0.0.1:2379'
-initial-advertise-peer-urls: 'http://10.193.102.205:2380'
-advertise-client-urls: 'http://10.193.102.205:2379'
-
-
-DISCOVERY_TOKEN=$(curl -s -m 1 --connect-timeout 1 https://discovery.etcd.io/new?size=3)

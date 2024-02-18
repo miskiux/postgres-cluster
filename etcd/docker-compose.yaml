@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  node:
+    build:
+      context: ./images
+      dockerfile: ./Dockerfile.base
+    tmpfs:
+      - /tmp
+      - /run
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+
+    #
+    # Cluster size and port mappings 
+    #
+    deploy:
+      replicas: 3
+    ports:
+      - "1010-1012:2380"
+
+    stdin_open: true
