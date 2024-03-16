@@ -3,16 +3,19 @@ version: '3.8'
 services:
   node:
     build:
-      context: ./images
-      dockerfile: ./Dockerfile.base
+      context: ./dockerfiles
+      dockerfile: ./Dockerfile.service
     tmpfs:
       - /tmp
       - /run
     volumes:
+      #
+      # running systemd requires attaching cgroup file system volume
+      #
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
 
     #
-    # Cluster size and port mappings 
+    # cluster size and port mappings P
     #
     deploy:
       replicas: 3

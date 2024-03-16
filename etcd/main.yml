@@ -1,2 +1,2 @@
 - name: Install etcd
-  ansible.builtin.import_playbook: install-etcd.yml
+  ansible.builtin.import_playbook: playbooks/install.yml

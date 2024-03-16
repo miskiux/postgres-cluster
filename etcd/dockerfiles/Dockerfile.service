@@ -1,0 +1,5 @@
+FROM miskiux/base-ha-psql
+
+RUN dnf -y install etcd
+
+CMD ["/usr/lib/systemd/systemd"]

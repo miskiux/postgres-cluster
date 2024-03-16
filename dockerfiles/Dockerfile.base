@@ -24,11 +24,12 @@ RUN dnf -y update \
     && dnf -y autoremove
 
 # Install required packages.
-# Remove packages that are nolonger requried.
+# Remove packages that are no longer requiried.
 # Clean the dnf cache.
 RUN dnf -y install \
     epel-release \
     initscripts \
+    curl \
     && dnf -y update \
     && dnf -y install \
     python3 \
@@ -40,6 +41,3 @@ RUN dnf -y install \
 
 # Upgrade pip.
 RUN pip3 install --upgrade pip
-
-
-CMD ["/usr/lib/systemd/systemd"]
