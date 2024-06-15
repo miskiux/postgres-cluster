@@ -8,14 +8,15 @@ services:
     tmpfs:
       - /tmp
       - /run
+
+    #
+    # confg: systemd requires attaching cgroup file system volume with read-only access
+    #
     volumes:
-      #
-      # running systemd requires attaching cgroup file system volume
-      #
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
 
     #
-    # cluster size and port mappings P
+    # confg: cluster size and port mappings
     #
     deploy:
       replicas: 3

@@ -3,5 +3,5 @@ Description=etcd distributed reliable key-value store
 
 [Service]
 Type=notify
-ExecStart=/opt/etcd/bin/etcd
+ExecStart=/usr/local/bin/etcd
 Restart=always

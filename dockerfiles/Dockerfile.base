@@ -32,6 +32,7 @@ RUN dnf -y install \
     curl \
     && dnf -y update \
     && dnf -y install \
+    curl \
     python3 \
     python3-pip \
     sudo \

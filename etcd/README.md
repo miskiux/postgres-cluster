@@ -1,16 +1,3 @@
-## running etcd cluster
+## etcd
 
-#### running systemd 
-
-- running systemd in unprivileged container
-
-#### Steps
-
-Run
-```
-ansible-playbook -i inventory/hosts main.yml -K
-```
-
-Flags:
-    -K : to specify sudo password
-
+Distributed consensus - etcd cluster acts as a source of truth and allows to achieve consensus for patroni instances.
