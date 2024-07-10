@@ -1,2 +1,0 @@
-- name: Install etcd
-  ansible.builtin.import_playbook: configuration/ansible/playbooks/install.yml

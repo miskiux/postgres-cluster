@@ -1,6 +1,0 @@
-- hosts: etcd
-  tasks:
-    - name: "Create dummy dir"
-      local_action: command docker exec -it {{ inventory_hostname }} bash -c 'mkdir dummydir'
-      become: true
-      register: output
